@@ -3,11 +3,9 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "test:integration": "npm test 'src/**/*.router.test.js'",
     "coverage": "npm test -- --coverage && opn coverage/lcov-report/index.html",
     "start": "nodemon -i '*.test.js' .",
-    "prod": "cross-env NODE_ENV=production nodemon -i '*.test.js' -r dotenv-safe/config .",
-    "lint": "eslint 'src/**/*.js'"
+    "prod": "cross-env NODE_ENV=production nodemon index"
   },
   "jest": {
     "testEnvironment": "node",
@@ -22,6 +20,7 @@
     "body-parser": "^1.15.2",
     "compression": "^1.6.2",
     "cors": "^2.8.1",
+    "cross-env": "^3.1.4",
     "express": "^4.13.4",
     "http": "0.0.0",
     "jsonwebtoken": "^5.7.0",
